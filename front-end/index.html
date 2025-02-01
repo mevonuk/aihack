@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enedis Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Logo_enedis_header.png" alt="logo-enedis" />
+    <h1>Enedis Media Insight</h1>
+  </header>
+
+   <!-- Section "choisir ce qu'on analyse" -->
+    <div class="what-is-analyzed">
+      <h2>Je veux analyser</h2>
+      <button id="several-articles">> Plusieurs articles</button>
+      <button id="one-article">> Un article</button>
+    </div>
+
+  <div class="main-content" id="multi-article-content">
+    <!-- Bloc Upload PDF -->
+    <div class="container">
+      <h1>Media Analyzer</h1>
+      <label for="fileInput" class="file-label">Choisir un fichier PDF</label>
+      <input type="file" id="fileInput" accept=".pdf" />
+      <p id="fileName"></p>
+      <button id="uploadBtn">Envoyer</button>
+      <p id="uploadStatus"></p>
+    </div>
+    <hr class="divider" width="1" size="500" style="0 auto" />
+    <div class="how-it-works">
+        <h3>Comment ça marche ?</h3>
+        <ul>
+          <li><strong>1.</strong> Regroupez vos articles dans un PDF.</li>
+          <li><strong>2.</strong> Uploadez le PDF dans Media Analyzer.</li>
+          <li><strong>3.</strong> L'IA analyse votre document.</li>
+          <li><strong>4.</strong> Téléchargez le document résumé.</li>
+        </ul>
+    </div>
+    <!-- Bloc Chat IA -->
+    <div class="ai-chatting hidden" id="single-article-content">
+      <h2>One article Insight</h2>
+      <textarea id="user-input" placeholder="Copiez l'article à analyser ici"></textarea>
+      <button onclick="sendMessageToAI()">Analyser</button>
+      <div id="ai-response" class="response-box"></div>
+    </div>
+  </div>
+
+  <footer>
+    <h4>Website by Sentient Coders</h4>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
