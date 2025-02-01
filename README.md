@@ -6,7 +6,7 @@ Problem: Large numbers of documents are collected each month from the media that
 
 Sentient Coders: Emma Blanchard - École 42, Martha Evonuk - École 42, Charles Herr - Telecom Paris, Zakaria Kaddaoui - CentraleSupélec) proposes the following solution.
 
-![architechture](https://github.com/user-attachments/assets/9f922fef-623e-4d86-b7cc-42a27ad34b95)
+![architechture](https://github.com/user-attachments/assets/82896281-f5ff-4c3d-b485-84ea8afb0c21)
 
 As shown in the achitechture, the solution is a web application, screenshots of which are shown below.
 
