@@ -8,9 +8,11 @@ Sentient Coders: Emma Blanchard - École 42, Martha Evonuk - École 42, Charles 
 
 ![architechture](https://github.com/user-attachments/assets/4594bd5c-a8c2-41ec-8670-bdf8a78d21e5)
 
-As shown in the achitechture, the solution is a web application, a screenshot of which is shown below.
+As shown in the achitechture, the solution is a web application, screenshots of which are shown below.
 
-![Enedis Analyzer](https://github.com/user-attachments/assets/4ebfac47-3673-42a6-b894-61e5eae01a1b)
+![Enedis Analyzer-multiple](https://github.com/user-attachments/assets/590fdcf9-e7bd-4e3c-ab45-0459060fa633)
+
+![Enedis Analyzer-single](https://github.com/user-attachments/assets/1f3e0665-7030-4ad9-b315-41d062c6725f)
 
 At the frontend, the user uploads the text to be analyzed; this information is then sent to AWS Bedrock where it is treated by the AI. The results of the analysis are then returned to the user on the frontend.
 
