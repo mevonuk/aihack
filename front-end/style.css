@@ -20,7 +20,7 @@ body {
     font-family: "Public-sans", sans-serif;
     text-align: center;
     background-color: whitesmoke;
-    color: #283618;
+    color: white;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -33,7 +33,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    background-color: whitesmoke;
+    background-color: white;
     position: relative;
 }
 

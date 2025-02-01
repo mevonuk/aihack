@@ -69,3 +69,57 @@ async function sendMessageToAI() {
         document.getElementById('ai-response').innerText = 'Une erreur est survenue. Veuillez réessayer.';
     }
 }
+
+/* Envoyer PDF a S3 */
+document.getElementById('fileInput').addEventListener('change', function () {
+    const file = this.files[0];
+    const fileNameDisplay = document.getElementById('fileName');
+
+    if (file) {
+        fileNameDisplay.textContent = `Fichier sélectionné : ${file.name}`; // Affiche le nom du fichier
+    } else {
+        fileNameDisplay.textContent = ''; // Efface le texte si aucun fichier sélectionné
+    }
+});
+
+document.getElementById('fileInput').addEventListener('change', function () {
+    const file = this.files[0];
+    const fileNameDisplay = document.getElementById('fileName');
+
+    if (file) {
+        fileNameDisplay.textContent = `Fichier sélectionné : ${file.name}`; // Affiche le nom du fichier
+    } else {
+        fileNameDisplay.textContent = ''; // Efface le texte si aucun fichier sélectionné
+    }
+});
+
+document.getElementById('uploadBtn').addEventListener('click', async () => {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+
+    if (!file) {
+        document.getElementById('uploadStatus').innerText = 'Veuillez sélectionner un fichier PDF.';
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = async function () {
+        const base64File = reader.result.split(',')[1];
+
+        try {
+            const response = await fetch('https://cdmjon52vg.execute-api.us-west-2.amazonaws.com/dev', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ body: base64File, isBase64Encoded: true })
+            });
+
+            const data = await response.json();
+            document.getElementById('uploadStatus').innerText = data.result || 'Analyse terminée !';
+        } catch (error) {
+            console.error('Erreur:', error);
+            document.getElementById('uploadStatus').innerText = 'Erreur lors de l’envoi du fichier.';
+        }
+    };
+
+    reader.readAsDataURL(file);
+});
