@@ -156,7 +156,7 @@ button {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
     transition: background 0.3s ease;
     margin-top: 10px;
