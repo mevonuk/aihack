@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enedis Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="assets/img/Logo_enedis_header.png" alt="logo-enedis" />
+  </header>
+
+  <!-- Section "Comment ça marche" en haut -->
+  <section class="how-it-works">
+    <h3>Comment ça marche ?</h3>
+    <ul>
+      <li><strong>1.</strong> Regroupez vos articles dans un PDF.</li>
+      <li><strong>2.</strong> Uploadez le PDF dans Enedis Analyzer.</li>
+      <li><strong>3.</strong> Analysez les résultats avec l'IA.</li>
+      <li><strong>4.</strong> Téléchargez le document résumé.</li>
+    </ul>
+  </section>
+
+  <div class="main-content">
+    <!-- Bloc Upload PDF -->
+    <div class="container">
+      <h1>Enedis Analyzer</h1>
+      <label for="fileInput" class="file-label">Choisir un fichier PDF</label>
+      <input type="file" id="fileInput" accept=".pdf" />
+      <p id="fileName"></p>
+      <button id="uploadBtn">Envoyer</button>
+      <p id="uploadStatus"></p>
+    </div>
+
+    <!-- Bloc Chat IA -->
+    <div class="ai-chatting">
+      <h2>Analyse des sentiments</h2>
+      <textarea id="user-input" placeholder="Collez le texte à analyser ici"></textarea>
+      <button onclick="sendMessageToAI()">Analyser</button>
+      <div id="ai-response" class="response-box"></div>
+    </div>
+  </div>
+
+  <footer>
+    <h4>Website by Sentient Coders</h4>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
