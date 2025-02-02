@@ -51,6 +51,96 @@ header h1 {
     text-align: center;
 }
 
+/* Menu Burger */
+.burger-menu {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.burger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #1422dc;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Menu déroulant */
+.dropdown-menu {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    border: 1px solid rgba(84, 84, 84, 0.254);
+    border-radius: 15px;
+    background: #1422dc;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 9;
+}
+
+.dropdown-menu button {
+    background: #1422dc;
+    text-transform: uppercase;
+    font-family: "Public-sans";
+    color: white;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu button:hover {
+    color: black;
+    background: #1422dc;
+}
+
+/* Bloc Data */
+.dashboard {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dashboard h3 {
+    color: black;
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+}
+
+.charts-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.dashboard canvas {
+    max-width: 600px;
+    margin: 40px;
+}
+
+/* Layout principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex: 1;
+}
+
 /* What is analyzed */
 .what-is-analyzed {
     background-color: #1422dc;
@@ -99,17 +189,6 @@ header h1 {
     line-height: 2rem;
     color: black;
 }
-
-/* Layout principal */
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    flex: 1;
-}
-
 
 /* Bloc Upload */
 .container {
