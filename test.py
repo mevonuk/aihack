@@ -78,6 +78,8 @@ def loop_pdf(pdf_file):
         # here have text to be sent to AI
         pp = pp + 1
 
+    return L
+
 
 l = loop_pdf("Revue-Médias - DR Nord-Pas-de-Calais du 02012025.pdf")
 print(l)
