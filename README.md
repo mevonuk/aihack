@@ -17,3 +17,7 @@ As shown in the achitechture, the solution is a web application, screenshots of 
 At the frontend, the user uploads the text to be analyzed; this information is then sent to AWS Bedrock where it is treated by the AI. The results of the analysis are then returned to the user on the frontend.
 
 Options include single document analysis and multi document analysis.
+
+After a multi document analysis, the output of the model and the text of the article are saved in an excel sheet.
+
+Visualization is also available:
