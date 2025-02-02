@@ -84,4 +84,3 @@ while pp <= num_articles - 1:
     pp = pp + 1
 
 wBook.save('AIoutput.xlsx')
-print('data written to file')
